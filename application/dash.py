@@ -528,56 +528,7 @@ body = html.Div([
 # Cintillo párrafos
        html.Br(),
     
-      dbc.Row([
-               dbc.Col(dbc.Container([
-                       html.P(
-                           "En 2015 en 10 entidades se registró  71.56 % de la Abuso sexual (91,181 delitos) :  Nuevo León  (17,062),  Ciudad de México  (16,103),  Chihuahua  (12,273),  Guanajuato  (10,298),  Baja California  (8,892),  Jalisco  (8,543),  Puebla  (5,024),  México  (4,722),  Tabasco  (4,230),  y  Morelos  (4,034).",
-                    className="top",)
-                                ], fluid=True)
-                       
-                      ),
-          dbc.Col(dbc.Jumbotron([
-                   dbc.Container([
-                       html.P(
-                           "En 2016 en 10 entidades se registró  67.16 % de la Abuso sexual (103,361 delitos) :  Ciudad de México  (18,426),  Nuevo León  (17,773),  Chihuahua  (11,960),  Jalisco  (11,431),  Guanajuato  (11,133),  Baja California  (8,315),  Coahuila de Zaragoza  (6,885),  Tamaulipas  (6,378),  Puebla  (5,586),  y  México  (5,474).",
-                    className="top")
-                                ], fluid=True)
-                                    ], fluid=True)
-                      ),
-          dbc.Col(
-                   dbc.Container([
-                       html.P(
-                           "En 2017 en 10 entidades se registró  62.45 % de la Abuso sexual (105,906 delitos) :  Ciudad de México  (18,360),  Nuevo León  (17,145),  Chihuahua  (11,583),  Guanajuato  (11,253),  Jalisco  (9,557),  Coahuila de Zaragoza  (8,968),  Baja California  (8,554),  Tamaulipas  (7,030),  México  (6,860),  y  Tabasco  (6,596).",
-                    className="top")
-                                ], fluid=True)
-                                    )
-                      ,
-          dbc.Col(dbc.Jumbotron([
-                   dbc.Container([
-                       html.P(
-                           "En 2018 en 10 entidades se registró  59.54 % de la Abuso sexual (107,290 delitos) :  Ciudad de México  (19,931),  Nuevo León  (16,410),  Chihuahua  (11,227),  Guanajuato  (10,356),  Baja California  (9,904),  Coahuila de Zaragoza  (9,791),  Jalisco  (8,850),  Puebla  (7,296),  Tamaulipas  (7,029),  y  México  (6,496).",
-                    className="top")
-                                ], fluid=True)
-                                    ], fluid=True)
-                      ),
-          dbc.Col(dbc.Container([
-                       html.P(
-                           "En 2019 en 10 entidades se registró  59.48 % de la Abuso sexual (125,029 delitos) :  Ciudad de México  (25,775),  Nuevo León  (16,339),  Guanajuato  (11,142),  Jalisco  (11,053),  Chihuahua  (10,968),  Coahuila de Zaragoza  (10,647),  Baja California  (10,455),  Veracruz de Ignacio de la Llave  (10,324),  México  (9,249),  y  Puebla  (9,077).",
-                    className="top")
-                                ], fluid=True)
-                      ),
-          dbc.Col(dbc.Jumbotron([
-                   dbc.Container([
-                       html.P(
-                          "En 2020 en 10 entidades se registró  61.55 % de la Abuso sexual (135,425 delitos) :  Ciudad de México  (27,769),  Nuevo León  (17,940),  México  (16,915),  Jalisco  (11,890),  Chihuahua  (11,293),  Baja California  (10,781),  Veracruz de Ignacio de la Llave  (10,386),  Guanajuato  (10,035),  Coahuila de Zaragoza  (9,291),  y  Puebla  (9,125).",
-                    className="top")
-                                ], fluid=True)
-                                    ], fluid=True),
-                  
-                      ),
- 
-      ]),
-                
+        
     
        html.Br(),
        html.Br(),
@@ -766,6 +717,14 @@ body = html.Div([
                            " México, 2021 "),
                   width={'size': 3, 'offset': 0}),
                ], justify="start",),
+    dbc.Row([    
+           dbc.Col(html.H5([dbc.Badge("Equipo responsable", 
+                          href="https://raw.githubusercontent.com/fdealbam/feminicidios/main/Autores.pdf",
+                          #color="light",
+                          #className="ml-1")
+                                     )]),
+                  width={'size': 3,  "offset": 4}),
+                       ], justify="start",),
         
             ])
 
