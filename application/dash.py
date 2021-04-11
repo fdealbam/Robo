@@ -507,11 +507,11 @@ body = html.Div([
            [
                dbc.Col(html.H1([str(f"{conf_2015:,d}")])),
                    #conf_2015)),d
-               dbc.Col(html.H1([str(f"{conf_2016:,d}")])),
-               dbc.Col(html.H1([str(f"{conf_2017:,d}")])),
-               dbc.Col(html.H1([str(f"{conf_2018:,d}")])),
-               dbc.Col(html.H1([str(f"{conf_2019:,d}")])),
-               dbc.Col(html.H1([str(f"{conf_2020:,d}")])),
+               dbc.Col(html.H2([str(f"{conf_2016:,d}")])),
+               dbc.Col(html.H2([str(f"{conf_2017:,d}")])),
+               dbc.Col(html.H2([str(f"{conf_2018:,d}")])),
+               dbc.Col(html.H2([str(f"{conf_2019:,d}")])),
+               dbc.Col(html.H2([str(f"{conf_2020:,d}")])),
             ],justify= "start"),
     
 # Cintillo 1.1https://github.com/fdealbam/abusosexual/blob/main/application/static/mapa201.jpeg
