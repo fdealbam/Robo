@@ -516,12 +516,12 @@ body = html.Div([
     
 # Cintillo 1.1https://github.com/fdealbam/abusosexual/blob/main/application/static/mapa201.jpeg
         dbc.Row([
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa abusosexual Total2015.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa abusosexual Total2016.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa abusosexual Total2017.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa abusosexual Total2018.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa abusosexual Total2019.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa abusosexual Total2015.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2015.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2016.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2017.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2018.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2019.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2020.jpeg?raw=true")),
                #dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/Violencia-Familiar/blob/main/application/static/mapa2021.jpeg?raw=true")),
           
         ]),
