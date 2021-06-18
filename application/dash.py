@@ -449,13 +449,36 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes. LUX], server=server)
 
 body = html.Div([
 # Cintillo 000
+    
+   html.Br(),
+    
+   dbc.Row([
+                                    #https://github.com/fdealbam/CamaraDiputados/blob/b11ef31e8e0f73e1a4a06ce60402563e1bd0122e/application/static/logocamara.jfif
+           dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/0entrada/blob/ce2cda9ccf7732861b8494b36562ebe9c8c642a6/application/static/logo%20cesopycamara.jpeg?raw=true"),
+                        width=5, md={'size': 2,  "offset": 2, }),
+            
+           dbc.Col(html.H5(" Centro de Estudios Sociales y de Opinión Pública," 
+                           " Cámara de Diputados"
+                           " México, 2021 "),
+                  width={'size': 3, 'offset': 0}),
+               ], justify="end",),
+            
+   
+   
+    html.Br(),
+    html.Br(),
+    html.Br(),
+    html.Br(),
+    
+    
         dbc.Row(
            [
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/CamaraDiputados/blob/main/application/static/logocamara.jfif?raw=true"),
-                        width={'size': 1,  "offset": 1}),
-               dbc.Col(html.H1("Abuso sexual (2015-2020)"),
-                        width={'offset' : 2}),
-           ]),
+               #dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/CamaraDiputados/blob/main/application/static/logocamara.jfif?raw=true"),
+               #         width={'size': 1,  "offset": 1}),
+               dbc.Col(html.P("Abuso sexual"),
+                        style={"font-size": 86, "text-align": "center",
+                              "text-shadow": "10px 20px 30px black",}),
+           ], justify= "start"),
 
 #Cintillo 00    
     dbc.Row(
