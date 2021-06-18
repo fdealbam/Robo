@@ -571,16 +571,18 @@ body = html.Div([
                                                         ]),
     
 
-    
-
-# Cintillo párrafos
-       html.Br(),
-    
-        
-    
+ 
        html.Br(),
        html.Br(),
-       
+       dbc.Row([
+               dbc.Col(html.P("Fuente: SENSNSP"),
+                        style={#"margin-left": "90px", 
+                               "font-size": 22, "text-align": "right", "margin-right":"50px"}),
+           ], justify= "right"),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
 #---------Grafica mensual
      dbc.Row(
            [
