@@ -506,7 +506,7 @@ body = html.Div([
                                                  style={"background-color":"white"}),
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
-                         'margin-left': '10px',
+                         
                         'width': '250px'
                          }, disabled=True)),
                dbc.Col(dbc.Button(([html.H5("2017", style={"font-size": 18,"color": "black","background-color": "white"}),
@@ -515,7 +515,7 @@ body = html.Div([
                                                  style={"background-color":"white"}),
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
-                         'margin-left': '10px',
+                         
                         'width': '250px'
                          }, disabled=True)),
                dbc.Col(dbc.Button(([html.H5("2018", style={"font-size": 18,"color": "black","background-color": "white"}),
@@ -524,7 +524,7 @@ body = html.Div([
                                                  style={"background-color":"white"}),
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
-                         'margin-left': '10px',
+                         
                         'width': '250px'
                          }, disabled=True)),
                dbc.Col(dbc.Button(([html.H5("2019", style={"font-size": 18,"color": "black","background-color": "white"}),
@@ -533,7 +533,7 @@ body = html.Div([
                                                  style={"background-color":"white"}),
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
-                         'margin-left': '10px',
+                         
                         'width': '250px'
                          }, disabled=True)),
                dbc.Col(dbc.Button(([html.H5("2020", style={"font-size": 18,"color": "black","background-color": "white"}),
@@ -542,7 +542,7 @@ body = html.Div([
                                                  style={"background-color":"white"}),
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
-                         'margin-left': '10px',
+                         
                         'width': '250px'
                          }, disabled=True)),
                                                         ]),
