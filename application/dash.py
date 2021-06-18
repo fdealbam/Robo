@@ -545,7 +545,7 @@ body = html.Div([
                          'margin-left': '10px',
                         'width': '250px'
                          }, disabled=True)),
-                                                        ], justify= "start"),
+                                                        ]),
     
 
     
