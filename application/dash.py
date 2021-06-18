@@ -34,7 +34,7 @@ d2 = today.strftime("Fecha de actualización : %d-%m-%Y")
 
 #os.chdir(r"C:\Users\PRIME\AnacondaProjects\Project_curso\\")
 
-delitos = pd.read_csv("https://github.com/fdealbam/Violencia-Familiar/blob/main/ViolenciaFamiliar2015_2021.csv?raw=true")
+delitos = pd.read_csv("https://raw.githubusercontent.com/fdealbam/abusosexual/main/Abusosexual2015_2021.csv")
 delitos.drop('Unnamed: 0',1, inplace=True)
 
 delitos.groupby(['Año','Entidad','Tipo de delito'])['Enero', 
@@ -114,7 +114,7 @@ femi15_21 = ff[[
  'Enero20','Febrero20','Marzo20','Abril20','Mayo20','Junio20','Julio20',
  'Agosto20','Septiembre20','Octubre20','Noviembre20','Diciembre20',
     
- 'Enero21','Febrero21','Marzo21',#'Abril21','Mayo21','Junio21','Julio21',
+ 'Enero21','Febrero21','Marzo21','Abril21',#'Mayo21','Junio21','Julio21',
 # 'Agosto21','Septiembre21','Octubre21','Noviembre21','Diciembre21'
              ]]
 
@@ -140,7 +140,7 @@ femi15_21['Total2020']= femi15_21[[ 'Enero20', 'Febrero20', 'Marzo20', 'Abril20'
                                'Junio20', 'Julio20', 'Agosto20', 'Septiembre20', 'Octubre20',
                                'Noviembre20', 'Diciembre20',]].sum(axis=1)
 
-femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21', 'Marzo21', #'Abril21', 'Mayo21',
+femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21', 'Marzo21', 'Abril21', #'Mayo21',
                                    #'Junio21','Julio21','Agosto21','Septiembre21','Octubre21',
                                    #'Noviembre21','Diciembre21'
                                   ]].sum(axis=1)
@@ -176,7 +176,7 @@ pagra = ff[[
  'Enero20', 'Febrero20', 'Marzo20', 'Abril20', 'Mayo20', 'Junio20', 'Julio20', 'Agosto20',
     'Septiembre20','Octubre20', 'Noviembre20', 'Diciembre20',
 
- 'Enero21', 'Febrero21', 'Marzo21',# 'Abril21', 'Mayo21', 'Junio21', 'Julio21', 'Agosto21',
+ 'Enero21', 'Febrero21', 'Marzo21','Abril21', #'Mayo21', 'Junio21', 'Julio21', 'Agosto21',
   #  'Septiembre21','Octubre21','Noviembre21','Diciembre21'
             ]]
 
@@ -220,10 +220,6 @@ graf_meses.update_layout(
     )
 
 
-
-
-
-#- FILE JSON PARA ENTIDADES ------------------------------------------------------------------------------
 
 
 
@@ -494,37 +490,66 @@ body = html.Div([
     
      dbc.Row(
            [
-               dbc.Col(html.H5("2015")),
-               dbc.Col(html.H5("2016")),
-               dbc.Col(html.H5("2017")),
-               dbc.Col(html.H5("2018")),
-               dbc.Col(html.H5("2019")),
-               dbc.Col(html.H5("2020")),
-           ], justify= "start"),
+               dbc.Col(dbc.Button(([html.H5("2015", style={"font-size": 18,"color": "black","background-color": "white"}),
+                                    html.H1([str(f"{conf_2015:,d}")],style={"font-size": 45, "color": "black","background-color": "white"}),
+                                    dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2015.jpeg?raw=true",
+                                                               style={"background-color":"white"}),
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '10px',
+                        'width': '250px'
+                         }, disabled=True)),
+               
+               dbc.Col(dbc.Button(([html.H5("2016", style={"font-size": 18,"color": "black","background-color": "white"}),
+                                    html.H1([str(f"{conf_2016:,d}")],style={"font-size": 45, "color": "black","background-color": "white"}),
+                                    dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2016.jpeg?raw=true",
+                                                 style={"background-color":"white"}),
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '10px',
+                        'width': '250px'
+                         }, disabled=True)),
+               dbc.Col(dbc.Button(([html.H5("2017", style={"font-size": 18,"color": "black","background-color": "white"}),
+                                    html.H1([str(f"{conf_2017:,d}")],style={"font-size": 45, "color": "black","background-color": "white"}),
+                                    dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2017.jpeg?raw=true",
+                                                 style={"background-color":"white"}),
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '10px',
+                        'width': '250px'
+                         }, disabled=True)),
+               dbc.Col(dbc.Button(([html.H5("2018", style={"font-size": 18,"color": "black","background-color": "white"}),
+                                    html.H1([str(f"{conf_2018:,d}")],style={"font-size": 45, "color": "black","background-color": "white"}),
+                                    dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2018.jpeg?raw=true",
+                                                 style={"background-color":"white"}),
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '10px',
+                        'width': '250px'
+                         }, disabled=True)),
+               dbc.Col(dbc.Button(([html.H5("2019", style={"font-size": 18,"color": "black","background-color": "white"}),
+                                    html.H1([str(f"{conf_2019:,d}")],style={"font-size": 45, "color": "black","background-color": "white"}),
+                                    dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2019.jpeg?raw=true",
+                                                 style={"background-color":"white"}),
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '10px',
+                        'width': '250px'
+                         }, disabled=True)),
+               dbc.Col(dbc.Button(([html.H5("2020", style={"font-size": 18,"color": "black","background-color": "white"}),
+                                    html.H1([str(f"{conf_2020:,d}")],style={"font-size": 45, "color": "black","background-color": "white"}),
+                                    dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2020.jpeg?raw=true",
+                                                 style={"background-color":"white"}),
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '10px',
+                        'width': '250px'
+                         }, disabled=True)),
+                                                        ], justify= "start"),
     
-#Cintillo 1
-    dbc.Row(
-           [
-               dbc.Col(html.H1([str(f"{conf_2015:,d}")])),
-                   #conf_2015)),d
-               dbc.Col(html.H2([str(f"{conf_2016:,d}")])),
-               dbc.Col(html.H2([str(f"{conf_2017:,d}")])),
-               dbc.Col(html.H2([str(f"{conf_2018:,d}")])),
-               dbc.Col(html.H2([str(f"{conf_2019:,d}")])),
-               dbc.Col(html.H2([str(f"{conf_2020:,d}")])),
-            ],justify= "start"),
+
     
-# Cintillo 1.1https://github.com/fdealbam/abusosexual/blob/main/application/static/mapa201.jpeg
-        dbc.Row([
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2015.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2016.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2017.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2018.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2019.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20abusosexual%20Total2020.jpeg?raw=true")),
-               #dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/Violencia-Familiar/blob/main/application/static/mapa2021.jpeg?raw=true")),
-          
-        ]),
+
 # Cintillo párrafos
        html.Br(),
     
@@ -571,97 +596,90 @@ body = html.Div([
     
      dbc.Row(
            [
-               dbc.Col(html.H3("Ciudad de México", ),
-                       #width=1, 
-                       lg={'size': 1,  "offset": 1, }
-                      ),
+               dbc.Col(dbc.Button(([html.P("Ciudad de México", style={"font-size": 30,"color": "black","background-color": "white"}),
+                       dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/cdmx.jpeg?raw=true",
+                  style={'size': 2,}),
+                          html.P(
+                          "Los 10 municipios con más abuso sexual fueron: Iztapalapa (2,631), "
+                              "Cuauhtémoc (2,402), Gustavo A. Madero (1,895), Álvaro Obregón (1,224),"
+                              "Venustiano Carranza (1,026), Coyoacán (998), Tlalpan (956), Miguel Hidalgo"
+                              "(891), Benito Juárez (758), y Iztacalco (642).",
+                     style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '300px',
+                        'width': '550px',
+                         
+                         }, disabled=True)),
                
-               dbc.Col(html.H3("México"),
-                        #width=1, 
-                       lg={'size': 1,  "offset": 1, }
-                      ),
-               
-               dbc.Col(html.H3("Nuevo León "),
-                       # width=1, 
-                       lg={'size': 3,  "offset": 2, }
-                      ),
-                      
-               dbc.Col(html.H3("Jalisco "),
-                       # width=1, 
-                       lg={'size': 1,  "offset": 1, }
-                      ),
-           ], #, justify= "end", 
-    align= "center"),
-
+               dbc.Col(dbc.Button(([html.P("México", style={"font-size": 30,"color": "black","background-color": "white"}),
+                       dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/mx.jpeg?raw=true",
+                                    style={'size': 2,}),
+                       html.P(
+                           "Los 10 municipios con más abuso sexual fueron: Ecatepec de Morelos (1,798), Toluca (950), Naucalpan de Juárez (767), Nezahualcóyotl (750), Tlalnepantla de Baz (562), Cuautitlán Izcalli (513), Chimalhuacán (445), Tecámac (441), Ixtapaluca (426), y Atizapán de Zaragoza (401).",
+                              style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
+                       ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                        # 'margin-left': '10px',
+                        'width': '550px',
+                                  
+                         }, disabled=True)),
+     ]),
+    html.Br(),
+    html.Br(),
+    html.Br(),
+    html.Br(),
+    html.Br(),
     
-    dbc.Row([
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/Violencia-Familiar/blob/main/application/static/cdmx.jpeg?raw=true"),
-                      #width=4,lg={'size': 3,  "offset": 3, }
-                      ),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/Violencia-Familiar/blob/main/application/static/mx1.jpg?raw=true"),
-                      #width=4,lg={'size': 3,  "offset": 3, }
-                      ),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/Violencia-Familiar/blob/main/application/static/nvoleon.jpeg?raw=true"),
-                      #width=4,lg={'size': 3,  "offset": 3, }
-                      ),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/Violencia-Familiar/blob/main/application/static/jal.jpeg?raw=true"),
-                      #width=4,lg={'size': 3,  "offset": 3, }
-                      ),
-           ], no_gutters=True),
-       #html.Br(),
+                dbc.Row([
+          dbc.Col(dbc.Button(([html.P("Jalisco ", style={"font-size": 30,"color": "black","background-color": "white"}),
+                       dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/jal.jpeg?raw=true"),
+    
+                       html.P(
+                           "Los 10 municipios con más abuso sexual fueron: Guadalajara (2,522), Zapopan (2,256), Tlajomulco de Zúñiga (1,347), Tonalá (1,054), Puerto Vallarta (778), El Salto (359), Tepatitlán de Morelos (193), Zapotlán el Grande (181), Tala (163), y Lagos de Moreno (161).",
+                           style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
+                              ]),
+                             style={"background-color":"white",
+                                    "box-shadow": "10px 20px 30px black",
+                                    'margin-left': '300px',
+                                    'width': '550px',
+                                  
+                         }, disabled=True)),
+                       
+               dbc.Col(dbc.Button(([html.P("Baja California ", style={"font-size": 30,"color": "black","background-color": "white"}),
+                       dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/bc.jpeg?raw=true"),
+                     html.Br(),
+                                     html.Br(),
+                                     html.Br(),
+                                   
+                        html.P(
+                          "Los 5 municipios con más abuso sexual fueron: Tijuana (3,782), Mexicali (1,987), Ensenada (1,489), Playas de Rosarito (310), Tecate (778), ).",
+                           style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                        # 'margin-left': '10px',
+                        'width': '550px',
+                        
+                         }, disabled=True)),
+                     html.Br(),
+          ]),
+  
 
     #################################################################  MUNICIPIOS ranking    
 
 
+  
+  
 
 
-    dbc.Row([
-               dbc.Col(dbc.Container([
-                       html.P(
-                          "Las 10 alcaldías con más Abuso sexual fueron: Iztapalapa (24,331), Gustavo A. Madero (15,405), Cuauhtémoc (10,556), Álvaro Obregón (10,006), Tlalpan (9,403), Coyoacán (8,537), Iztacalco (8,115), Venustiano Carranza (7,423), Xochimilco (6,696), y Azcapotzalco (6,457).",
- 
-                    className="top",)
-                                ], fluid=True)
-                       
-                      ),
-          dbc.Col(dbc.Jumbotron([
-                   dbc.Container([
-                       html.P(
-                           "Los 10 municipios con más Abuso sexual fueron: Ecatepec de Morelos (5,828), Toluca (3,926), Nezahualcóyotl (3,353), Naucalpan de Juárez (3,304), Cuautitlán Izcalli (2,310), Tlalnepantla de Baz (1,964), Atizapán de Zaragoza (1,936), Chalco (1,853), Tultitlán (1,835), y Tecámac (1,664).",
-                    className="top")
-                                ], fluid=True)
-                                    ], fluid=True)
-                      ),
-
-       dbc.Col(
-                   dbc.Container([
-                       html.P(
-                           "Los 10 municipios con más Abuso sexual fueron: Monterrey (20,079), Guadalupe (11,511), Apodaca (10,997), Juárez (10,074), García (9,976), San Nicolás de los Garza (5,758), Santa Catarina (5,543), Cadereyta Jiménez (3,127), Pesquería (3,029), y Salinas Victoria (1,633).",
-                    className="top")
-                                ], fluid=True)
-                                    )
-                      ,
-          dbc.Col(dbc.Jumbotron([
-                   dbc.Container([
-                       html.P(
-                          "Los 10 municipios con más Abuso sexual fueron: Guadalajara (14,481), Zapopan (11,968), Tlajomulco de Zúñiga (6,400), Tonalá (5,527), Puerto Vallarta (3,333), El Salto (1,779), Tepatitlán de Morelos (964), Lagos de Moreno (889), Autlán de Navarro (759), y Ameca (660).",
-                    className="top")
-                                ], fluid=True)
-                                    ], fluid=True)
-                      ),
-      ]),
-
-
-#    
-    
-    dbc.Row([
-               
-           ]),
+#  
+       html.Br(),
+       html.Br(),
+        html.Br(),
+        html.Br(),
+        html.Br(),
+        html.Br(),
    
-
-       html.Br(),
-       html.Br(),
-       html.Br(),
        
 #---------Grafica por entidad
      dbc.Row(
@@ -672,7 +690,7 @@ body = html.Div([
             ]),
 
        html.Br(),
-       html.Br(),
+    html.Br(),
        html.Br(),
     
     dbc.Row(
