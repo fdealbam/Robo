@@ -494,10 +494,19 @@ body = html.Div([
        html.Br(),
        html.Br(),
        html.Br(),
+     
+    
+     html.Br(),
+       html.Br(),
+        dbc.Row(
+           [
+               dbc.Col(html.P("Evolución de la incidencia de abuso sexual" ),
+                        style={"font-size": 56, "text-align": "left", "margin-left":"50px",
+                              "text-shadow": "10px 20px 30px black",}),
+           ], justify= "start"),
+    
        html.Br(),
        html.Br(),
-    
-    
 #cintillo 0
     
      dbc.Row(
@@ -601,11 +610,17 @@ body = html.Div([
         ]),
 
       
+          html.Br(),
+       html.Br(),
+       dbc.Row([
+               dbc.Col(html.P("Fuente: SENSNSP"),
+                        style={#"margin-left": "90px", 
+                               "font-size": 22, "text-align": "right", "margin-right":"50px"}),
+           ], justify= "right"),
        html.Br(),
        html.Br(),
-    
-##Cintillo mapas y ranking
-
+       html.Br(),
+       html.Br(),
     #títulos
      dbc.Row(
            [
@@ -694,16 +709,17 @@ body = html.Div([
 
 
   
-  
-
-
-#  
+         html.Br(),
+       html.Br(),
+       dbc.Row([
+               dbc.Col(html.P("Fuente: SENSNSP"),
+                        style={#"margin-left": "90px", 
+                               "font-size": 22, "text-align": "right", "margin-right":"50px"}),
+           ], justify= "right"),
        html.Br(),
        html.Br(),
-        html.Br(),
-        html.Br(),
-        html.Br(),
-        html.Br(),
+       html.Br(),
+       html.Br(),
    
        
 #---------Grafica por entidad
@@ -737,8 +753,13 @@ body = html.Div([
                    #lg={'size': 5,  "offset": 1,}),
         ], justify="end", no_gutters=True,),
 
+             html.Br(),
        html.Br(),
-       html.Br(),
+       dbc.Row([
+               dbc.Col(html.P("Fuente: SENSNSP"),
+                        style={#"margin-left": "90px", 
+                               "font-size": 22, "text-align": "right", "margin-right":"50px"}),
+           ], justify= "right"),
        html.Br(),
        html.Br(),
        html.Br(),
