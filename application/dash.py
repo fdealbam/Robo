@@ -735,13 +735,11 @@ body = html.Div([
                            " México, 2021 "),
                   width={'size': 3, 'offset': 0}),
                ], justify="start",),
-    dbc.Row([    
-           dbc.Col(html.H5([dbc.Badge("Equipo responsable", 
-                          href="https://raw.githubusercontent.com/fdealbam/feminicidios/main/Autores.pdf",
-                          #color="light",
-                          #className="ml-1")
+   dbc.Row([    
+           dbc.Col(html.P([dbc.Badge("Equipo responsable", style={"font-size":20},
+                          href="https://innovation-learning.herokuapp.com/",
                                      )]),
-                  width={'size': 3,  "offset": 4}),
+                  width={'size': 3,  "offset": 3}),
                        ], justify="start",),
         
             ])
