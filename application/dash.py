@@ -393,7 +393,7 @@ body = html.Div([
             [
                 #html.H4("Consideraciones generales "),
                 html.P(
-                    "LE abuso sexual es uno de los delitos más graves de la violencia de género que se vive en el país, "
+                    "El abuso sexual es uno de los delitos más graves de la violencia de género que se vive en el país, "
                     "además, son problemas aún irresueltos y son tema central de la " 
                     "agenda legislativa, pero hoy alcanzan relevancia en la agenda seguridad pública del país, también. "
                     "Este dashboard analítico se compone de una sección en la cual tratamos el abuso sexual, observamos "
