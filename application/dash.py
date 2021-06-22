@@ -502,7 +502,7 @@ body = html.Div([
                          }, disabled=True)),
                dbc.Col(dbc.Button(([html.H5("2021", style={"font-size": 18,"color": "black","background-color": "white"}),
                                     html.H1([str(f"{conf_2021:,d}")],style={"font-size": 45, "color": "black","background-color": "white"}),
-                                    dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20asbusosexual%20Total2020.png?raw=true",
+                                    dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20asbusosexual%20Total2021.png?raw=true",
                                                  style={"background-color":"white"}),
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
