@@ -408,10 +408,7 @@ body = html.Div([
       "; también incluimos un análisis detallado de las cuatro entidades con más incidencias en este delito"+
       "; finalmente, comparamos los rankings por entidad según sumas acumuladas respecto a las tasas, ambas "+
       "por entidad y ambas del periódo 2015 al 2021.",
-                    "Este dashboard analítico se compone de una sección en la cual tratamos el abuso sexual, observamos "
-                    "su gravedad según intervalos anuales o mensuales; incluimos el análisis detallado de cuatro "
-                    "entidades con más incidencias de este delito; finalmente, comparamos los rankings por entidad "
-                    "según sumas del periódo 2015 al 2021 con las tasas por entidad del mismo intervalo. " 
+               
                     " "                    
                     "Hoy existen cada vez mayor atención institucional para atender la violencia contra las mujeres y son fuerte "
                     "preocupación de la sociedad, esto último se evidencia en el hecho que todos seamos más vigilantes al respecto. "
