@@ -123,7 +123,7 @@ femi15_21 = ff[[
  'Enero20','Febrero20','Marzo20','Abril20','Mayo20','Junio20','Julio20',
  'Agosto20','Septiembre20','Octubre20','Noviembre20','Diciembre20',
     
- 'Enero21','Febrero21','Marzo21','Abril21','Mayo21','Junio21',#'Julio21',
+ 'Enero21','Febrero21','Marzo21','Abril21','Mayo21','Junio21','Julio21',
 # 'Agosto21','Septiembre21','Octubre21','Noviembre21','Diciembre21'
              ]]
 
@@ -150,7 +150,7 @@ femi15_21['Total2020']= femi15_21[[ 'Enero20', 'Febrero20', 'Marzo20', 'Abril20'
                                'Noviembre20', 'Diciembre20',]].sum(axis=1)
 
 femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21', 'Marzo21', 'Abril21', 'Mayo21',
-                                   'Junio21',#'Julio21','Agosto21','Septiembre21','Octubre21',
+                                   'Junio21','Julio21',#'Agosto21','Septiembre21','Octubre21',
                                    #'Noviembre21','Diciembre21'
                                   ]].sum(axis=1)
 
@@ -185,7 +185,7 @@ pagra = ff[[
  'Enero20', 'Febrero20', 'Marzo20', 'Abril20', 'Mayo20', 'Junio20', 'Julio20', 'Agosto20',
     'Septiembre20','Octubre20', 'Noviembre20', 'Diciembre20',
 
- 'Enero21', 'Febrero21', 'Marzo21','Abril21', 'Mayo21', 'Junio21',# 'Julio21', 'Agosto21',
+ 'Enero21', 'Febrero21', 'Marzo21','Abril21', 'Mayo21', 'Junio21', 'Julio21',# 'Agosto21',
   #  'Septiembre21','Octubre21','Noviembre21','Diciembre21'
             ]]
 
@@ -538,7 +538,7 @@ body = html.Div([
                        dbc.Badge("mensuales", color="info", className="mr-1")]), 
                                        width={'size': 11,  "offset":1 })]),
        dbc.Row([        
-               dbc.Col(html.H5("(hasta junio 2021)"),
+               dbc.Col(html.H5("(hasta julio 2021)"),
                                        width={ 'size': 3, "offset":1 }),
 
             ]),
@@ -579,10 +579,7 @@ body = html.Div([
                        dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/cdmx.jpeg?raw=true",
                   style={'size': 2,}),
                           html.P(
-                          "Las 10 alcaldías  con más abuso sexual fueron: Iztapalapa (2,631), "
-                              "Cuauhtémoc (2,402), Gustavo A. Madero (1,895), Álvaro Obregón (1,224),"
-                              "Venustiano Carranza (1,026), Coyoacán (998), Tlalpan (956), Miguel Hidalgo"
-                              "(891), Benito Juárez (758), y Iztacalco (642).",
+                          "Las 10 alcaldías  con más incidencias de abuso sexual fueron: Iztapalapa (2,799), Cuauhtémoc (2,547), Gustavo A. Madero (2,012), Álvaro Obregón (1,310), Venustiano Carranza (1,089), Coyoacán (1,051), Tlalpan (1,037), Miguel Hidalgo (938), Benito Juárez (808), y Iztacalco (683).",
                      style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
@@ -590,19 +587,21 @@ body = html.Div([
                         'width': '550px',
                          
                          }, disabled=True)),
-               
-               dbc.Col(dbc.Button(([html.P("México", style={"font-size": 30,"color": "black","background-color": "white"}),
-                       dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/mx.jpeg?raw=true",
-                                    style={'size': 2,}),
+                  dbc.Col(dbc.Button(([html.P("Jalisco ", style={"font-size": 30,"color": "black","background-color": "white"}),
+                       dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/jal.jpeg?raw=true"),
+    
                        html.P(
-                           "Los 10 municipios con más abuso sexual fueron: Ecatepec de Morelos (1,798), Toluca (950), Naucalpan de Juárez (767), Nezahualcóyotl (750), Tlalnepantla de Baz (562), Cuautitlán Izcalli (513), Chimalhuacán (445), Tecámac (441), Ixtapaluca (426), y Atizapán de Zaragoza (401).",
-                              style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
-                       ]), style={"background-color":"white",
-                         "box-shadow": "10px 20px 30px black",
-                        # 'margin-left': '10px',
-                        'width': '550px',
+                           "Los diez municipios con más incidencias de abuso sexual fueron: Guadalajara (2,637), Zapopan (2,349), Tlajomulco de Zúñiga (1,413), Tonalá (1,097), Puerto Vallarta (830), El Salto (383), Tepatitlán de Morelos (201), Zapotlán el Grande (186), Lagos de Moreno (173), y Ixtlahuacán de los Membrillos (169).",
+                           style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
+                              ]),
+                             style={"background-color":"white",
+                                    "box-shadow": "10px 20px 30px black",
+                                  #  'margin-left': '300px',
+                                    'width': '550px',
                                   
                          }, disabled=True)),
+               
+              
      ]),
     html.Br(),
     html.Br(),
@@ -611,28 +610,27 @@ body = html.Div([
     html.Br(),
     
                 dbc.Row([
-          dbc.Col(dbc.Button(([html.P("Jalisco ", style={"font-size": 30,"color": "black","background-color": "white"}),
-                       dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/jal.jpeg?raw=true"),
-    
+                     dbc.Col(dbc.Button(([html.P("México", style={"font-size": 30,"color": "black","background-color": "white"}),
+                       dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/mx.jpeg?raw=true",
+                                    style={'size': 2,}),
                        html.P(
-                           "Los 10 municipios con más abuso sexual fueron: Guadalajara (2,522), Zapopan (2,256), Tlajomulco de Zúñiga (1,347), Tonalá (1,054), Puerto Vallarta (778), El Salto (359), Tepatitlán de Morelos (193), Zapotlán el Grande (181), Tala (163), y Lagos de Moreno (161).",
-                           style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
-                              ]),
-                             style={"background-color":"white",
-                                    "box-shadow": "10px 20px 30px black",
-                                    'margin-left': '300px',
-                                    'width': '550px',
+                           "Los diez municipios con más incidencias de abuso sexual fueron: Ecatepec de Morelos (1,942), Toluca (1,048), Naucalpan de Juárez (853), Nezahualcóyotl (800), Tlalnepantla de Baz (609), Cuautitlán Izcalli (544), Chimalhuacán (491), Tecámac (478), Ixtapaluca (464), y Atizapán de Zaragoza (421).",
+                              style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
+                       ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                        'margin-left': '300px',
+                        'width': '550px',
                                   
                          }, disabled=True)),
+       
                        
-               dbc.Col(dbc.Button(([html.P("Baja California ", style={"font-size": 30,"color": "black","background-color": "white"}),
-                       dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/bc.jpeg?raw=true"),
-                     html.Br(),
-                                     html.Br(),
-                                     html.Br(),
+               dbc.Col(dbc.Button(([html.P("Chihuahua ", style={"font-size": 30,"color": "black","background-color": "white"}),
+                       dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/ch.png?raw=true"),
+                
+                                   
                                    
                         html.P(
-                          "Los 5 municipios con más abuso sexual fueron: Tijuana (3,782), Mexicali (1,987), Ensenada (1,489), Playas de Rosarito (310), Tecate (778), ).",
+                          "Los diez municipios con más incidencias de abuso sexual fueron: Juárez (3,464), Chihuahua (2,682), Delicias (445), Cuauhtémoc (333), Hidalgo del Parral (254), Nuevo Casas Grandes (122), Camargo (120), Meoqui (89), Jiménez (85), y Saucillo (62).",
                            style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
@@ -782,8 +780,8 @@ app.layout = html.Div([body],
                                     "background-color": "lightgray"}
                                     )
 
-from application.dash import app
-from settings import config
+#from application.dash import app
+#from settings import config
 
 if __name__ == "__main__":
     app.run_server()
