@@ -43,7 +43,7 @@ TASAABUSOSEXUAL = tabla1_f.iloc[0]['tasa_acumulada']
 
 #os.chdir(r"C:\Users\PRIME\AnacondaProjects\Project_curso\\")
 
-delitos = pd.read_csv("https://raw.githubusercontent.com/fdealbam/abusosexual/main/Abusosexual2015_2021.csv")
+delitos = pd.read_csv("https://raw.githubusercontent.com/fdealbam/abusosexual/main/Abusosexual20152021.csv")
 delitos.drop('Unnamed: 0',1, inplace=True)
 
 delitos.groupby(['Año','Entidad','Tipo de delito'])['Enero', 
