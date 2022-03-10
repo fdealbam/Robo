@@ -634,6 +634,15 @@ body = html.Div([
                          
                         'width': '200px'
                          }, disabled=True)),
+               dbc.Col(dbc.Button(([html.H5("2022", style={"font-size": 18,"color": "black","background-color": "white"}),
+                                    html.H1([str(f"{conf_2022:,d}")],style={"font-size": 45, "color": "black","background-color": "white"}),
+                                    dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa%20asbusosexual%20Total2022.png?raw=true",
+                                                 style={"background-color":"white"}),
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         
+                        'width': '200px'
+                         }, disabled=True)),
                                                         ]),
     
 
@@ -899,6 +908,3 @@ app.layout = html.Div([body],
 
 if __name__ == "__main__":
     app.run_server()
-
-    
-    
