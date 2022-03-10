@@ -347,7 +347,7 @@ delitoso = pd.read_csv('0agrup.csv')
 delitoso['Grand total'] = delitoso[['Enero', 'Febrero', 'Marzo','Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre','Noviembre', 'Diciembre']].sum(1)
 TOTABUSOSEXUAL = delitoso['Grand total'].sum()
 pobtot = junto15_21['Totpob1521'].sum()
-TASAABUSOSEXUAL = round((TOTTRATAPERSONAS/pobtot)*100000,0)
+TASAABUSOSEXUAL = round((TOTABUSOSEXUAL/pobtot)*100000,0)
 
 delCiu = delitoso[delitoso.Entidad == 'Ciudad de México']
 delMex = delitoso[delitoso.Entidad == 'Jalisco']
