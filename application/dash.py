@@ -520,12 +520,12 @@ body = html.Div([
                     "El abuso sexual es uno de los delitos más graves de la violencia de género que se vive en el país, "
                     "además, son problemas aún irresueltos y son tema central de la " 
                     "agenda legislativa, pero hoy alcanzan relevancia en la agenda seguridad pública del país, también. "
-                   " Entre 2015 y 2021 se registraron "+ str(f"{int(TOTABUSOSEXUAL):,}") +" casos, lo que representa una tasa de "+
+                   " Entre 2015 y 2022 se registraron "+ str(f"{int(TOTABUSOSEXUAL):,}") +" casos, lo que representa una tasa de "+
        str(TASAABUSOSEXUAL) +" delitos por cada 100 mil habitantes. "+
       "En este tablero analítico observamos su gravedad según intervalos anuales e intervalos mensuales"+
       "; también incluimos un análisis detallado de las cuatro entidades con más incidencias en este delito"+
       "; finalmente, comparamos los rankings por entidad según sumas acumuladas respecto a las tasas, ambas "+
-      "por entidad y ambas del periódo 2015 al 2022.",
+      "por entidad y ambas del periodo 2015 al 2022.",
                
                     " "                    
                     "Hoy existen cada vez mayor atención institucional para atender la violencia contra las mujeres y son fuerte "
