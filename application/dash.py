@@ -17,7 +17,7 @@ import sidetable as stb
 import datetime
 from datetime import datetime, timedelta
 from datetime import date
-import geopandas as gpd
+#import geopandas as gpd
 import flask
 import os
 
@@ -40,7 +40,7 @@ tabla1_f.reset_index(inplace=True,)
 
 #os.chdir(r"C:\Users\PRIME\AnacondaProjects\Project_curso\\")
 
-delitos = pd.read_csv("https://raw.githubusercontent.com/fdealbam/abusosexual/main/Abusosexual20152021.csv")
+delitos = pd.read_csv("https://raw.githubusercontent.com/fdealbam/abusosexual/main/Abusosexual2015_2021.csv")
 delitos.drop('Unnamed: 0',1, inplace=True)
 
 delitos.groupby(['Año','Entidad','Tipo de delito'])['Enero', 
@@ -127,7 +127,7 @@ femi15_21 = fg[[
  'Enero21','Febrero21','Marzo21','Abril21','Mayo21','Junio21','Julio21',
  'Agosto21','Septiembre21','Octubre21','Noviembre21','Diciembre21',
     
- 'Enero22',#'Febrero22','Marzo22','Abril22','Mayo22','Junio22','Julio22',
+ 'Enero22','Febrero22','Marzo22','Abril22','Mayo22','Junio22',#'Julio22',
  #'Agosto22','Septiembre22','Octubre22','Noviembre22','Diciembre22'
              ]]
 
@@ -155,8 +155,8 @@ femi15_21['Total2020']= femi15_21[[ 'Enero20', 'Febrero20', 'Marzo20', 'Abril20'
 femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21', 'Marzo21', 'Abril21', 'Mayo21',
                                    'Junio21','Julio21','Agosto21','Septiembre21','Octubre21',
                                    'Noviembre21','Diciembre21']].sum(axis=1)
-femi15_21['Total2022']= femi15_21[[ 'Enero22', #'Febrero22', 'Marzo22', 'Abril22', 'Mayo22',
-                               #'Junio22', 'Julio22', 'Agosto22', 'Septiembre22', 'Octubre22',
+femi15_21['Total2022']= femi15_21[[ 'Enero22', 'Febrero22', 'Marzo22', 'Abril22', 'Mayo22',
+                               'Junio22',# 'Julio22', 'Agosto22', 'Septiembre22', 'Octubre22',
                                #'Noviembre22', 'Diciembre22',
                                   ]].sum(axis=1)
 
@@ -194,7 +194,7 @@ pagra = fg[[
  'Enero21', 'Febrero21', 'Marzo21','Abril21', 'Mayo21', 'Junio21', 'Julio21', 'Agosto21',
    'Septiembre21','Octubre21','Noviembre21','Diciembre21',
 
- 'Enero22', #'Febrero22', 'Marzo22','Abril22', 'Mayo22', 'Junio22', 'Julio22', 'Agosto22',
+ 'Enero22', 'Febrero22', 'Marzo22','Abril22', 'Mayo22', 'Junio22',# 'Julio22', 'Agosto22',
    #'Septiembre22','Octubre22','Noviembre22','Diciembre22'
             ]]
 
@@ -665,7 +665,7 @@ body = html.Div([
                        dbc.Badge("mensuales", color="info", className="mr-1")]), 
                                        width={'size': 11,  "offset":1 })]),
        dbc.Row([        
-               dbc.Col(html.H5("(hasta enero 2022)"),
+               dbc.Col(html.H5("(hasta junio 2022)"),
                                        width={ 'size': 3, "offset":1 }),
 
             ]),
@@ -811,7 +811,8 @@ body = html.Div([
             
             dbc.Col(dcc.Graph(figure= graf_tasafem, config= "autosize")),
                    #lg={'size': 5,  "offset": 1,}),
-        ], justify="end", no_gutters=True,),
+        ], justify="end", #no_gutters=True,
+    ),
 
              html.Br(),
        html.Br(),
