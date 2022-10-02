@@ -349,6 +349,16 @@ TOTABUSOSEXUAL = delitoso['Grand total'].sum()
 pobtot = junto15_21['Totpob1521'].sum()
 TASAABUSOSEXUAL = round((TOTABUSOSEXUAL/pobtot)*100000,0)
 
+otrooso = delitoso.copy()
+otrooso.groupby(['Entidad'])['Grand total'].sum().to_csv('0agrup2.csv')
+enorden = pd.read_csv('0agrup2.csv')
+enorden2 = enorden.sort_values('Grand total', ascending=False, ignore_index=True)
+
+edoname1 = enorden2.iloc[0]['Entidad']
+edoname2 = enorden2.iloc[1]['Entidad']
+edoname3 = enorden2.iloc[2]['Entidad']
+edoname4 = enorden2.iloc[3]['Entidad']
+
 delCiu = delitoso[delitoso.Entidad == 'Ciudad de México']
 delMex = delitoso[delitoso.Entidad == 'Jalisco']
 delChi = delitoso[delitoso.Entidad == 'México']
@@ -702,7 +712,7 @@ body = html.Div([
     
      dbc.Row(
            [
-               dbc.Col(dbc.Button(([html.P("Ciudad de México", style={"font-size": 30,"color": "black","background-color": "white"}),
+               dbc.Col(dbc.Button(([html.P(edoname1, style={"font-size": 30,"color": "black","background-color": "white"}),
                        dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa Ciudad de México.png?raw=true",
                   style={'size': 2,}),
                           html.P(bulletedo1,
@@ -713,7 +723,7 @@ body = html.Div([
                         'width': '550px',
                          
                          }, disabled=True)),
-                  dbc.Col(dbc.Button(([html.P("México", style={"font-size": 30,"color": "black","background-color": "white"}),
+                  dbc.Col(dbc.Button(([html.P(edoname2, style={"font-size": 30,"color": "black","background-color": "white"}),
                        dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa México.png?raw=true"),
     
                        html.P(bulletedo2,
@@ -735,7 +745,7 @@ body = html.Div([
     html.Br(),
     
                 dbc.Row([
-                     dbc.Col(dbc.Button(([html.P("Jalisco", style={"font-size": 30,"color": "black","background-color": "white"}),
+                     dbc.Col(dbc.Button(([html.P(edoname3, style={"font-size": 30,"color": "black","background-color": "white"}),
                        dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa Jalisco.png?raw=true",
                                     style={'size': 2,}),
                        html.P(bulletedo3,
@@ -748,7 +758,7 @@ body = html.Div([
                          }, disabled=True)),
        
                        
-               dbc.Col(dbc.Button(([html.P("Chihuahua", style={"font-size": 30,"color": "black","background-color": "white"}),
+               dbc.Col(dbc.Button(([html.P(edoname4, style={"font-size": 30,"color": "black","background-color": "white"}),
                        dbc.CardImg(src="https://github.com/fdealbam/abusosexual/blob/main/application/static/Mapa Chihuahua.png?raw=true"),
                 
                                    
