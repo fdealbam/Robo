@@ -359,10 +359,13 @@ edoname2 = enorden2.iloc[1]['Entidad']
 edoname3 = enorden2.iloc[2]['Entidad']
 edoname4 = enorden2.iloc[3]['Entidad']
 
-delCiu = delitoso[delitoso.Entidad == 'Ciudad de México']
-delMex = delitoso[delitoso.Entidad == 'Jalisco']
-delChi = delitoso[delitoso.Entidad == 'México']
-delPue = delitoso[delitoso.Entidad == 'Chihuahua']
+delCiu = delitoso[delitoso.Entidad == edoname1 ]
+delMex = delitoso[delitoso.Entidad == edoname2 ]
+delChi = delitoso[delitoso.Entidad == edoname3 ]
+delPue = delitoso[delitoso.Entidad == edoname4 ]
+
+delCiu2 = delCiu.sort_values('Grand total', ascending=False, ignore_index=True)
+
 
 
 delCiu2 = delCiu.sort_values('Grand total', ascending=False, ignore_index=True)
@@ -380,16 +383,16 @@ n7edo1 = delCiu2.iloc[6]['Municipio']
 n8edo1 = delCiu2.iloc[7]['Municipio']
 n9edo1 = delCiu2.iloc[8]['Municipio']
 n10edo1 = delCiu2.iloc[9]['Municipio']
-v1edo1 = f"{int(delCiu2.iloc[0]['Grand total']):,}"
-v2edo1 = f"{int(delCiu2.iloc[1]['Grand total']):,}"
-v3edo1 = f"{int(delCiu2.iloc[2]['Grand total']):,}"
-v4edo1 = f"{int(delCiu2.iloc[3]['Grand total']):,}"
-v5edo1 = f"{int(delCiu2.iloc[4]['Grand total']):,}"
-v6edo1 = f"{int(delCiu2.iloc[5]['Grand total']):,}"
-v7edo1 = f"{int(delCiu2.iloc[6]['Grand total']):,}"
-v8edo1 = f"{int(delCiu2.iloc[7]['Grand total']):,}"
-v9edo1 = f"{int(delCiu2.iloc[8]['Grand total']):,}"
-v10edo1 =f"{ int(delCiu2.iloc[9]['Grand total']):,}"
+v1edo1 = int(delCiu2.iloc[0]['Grand total'])
+v2edo1 = int(delCiu2.iloc[1]['Grand total'])
+v3edo1 = int(delCiu2.iloc[2]['Grand total'])
+v4edo1 = int(delCiu2.iloc[3]['Grand total'])
+v5edo1 = int(delCiu2.iloc[4]['Grand total'])
+v6edo1 = int(delCiu2.iloc[5]['Grand total'])
+v7edo1 = int(delCiu2.iloc[6]['Grand total'])
+v8edo1 = int(delCiu2.iloc[7]['Grand total'])
+v9edo1 = int(delCiu2.iloc[8]['Grand total'])
+v10edo1 = int(delCiu2.iloc[9]['Grand total'])
 
 n1edo2 = delMex2.iloc[0]['Municipio']
 n2edo2 = delMex2.iloc[1]['Municipio']
@@ -401,16 +404,16 @@ n7edo2 = delMex2.iloc[6]['Municipio']
 n8edo2 = delMex2.iloc[7]['Municipio']
 n9edo2 = delMex2.iloc[8]['Municipio']
 n10edo2 = delMex2.iloc[9]['Municipio']
-v1edo2 =f"{ int(delMex2.iloc[0]['Grand total']):,}"
-v2edo2 =f"{ int(delMex2.iloc[1]['Grand total']):,}"
-v3edo2 =f"{ int(delMex2.iloc[2]['Grand total']):,}"
-v4edo2 =f"{ int(delMex2.iloc[3]['Grand total']):,}"
-v5edo2 =f"{ int(delMex2.iloc[4]['Grand total']):,}"
-v6edo2 =f"{ int(delMex2.iloc[5]['Grand total']):,}"
-v7edo2 =f"{ int(delMex2.iloc[6]['Grand total']):,}"
-v8edo2 =f"{ int(delMex2.iloc[7]['Grand total']):,}"
-v9edo2 =f"{ int(delMex2.iloc[8]['Grand total']):,}"
-v10edo2 =f"{int( delMex2.iloc[9]['Grand total']):,}"
+v1edo2 = int(delMex2.iloc[0]['Grand total'])
+v2edo2 = int(delMex2.iloc[1]['Grand total'])
+v3edo2 = int(delMex2.iloc[2]['Grand total'])
+v4edo2 = int(delMex2.iloc[3]['Grand total'])
+v5edo2 = int(delMex2.iloc[4]['Grand total'])
+v6edo2 = int(delMex2.iloc[5]['Grand total'])
+v7edo2 = int(delMex2.iloc[6]['Grand total'])
+v8edo2 = int(delMex2.iloc[7]['Grand total'])
+v9edo2 = int(delMex2.iloc[8]['Grand total'])
+v10edo2 =int( delMex2.iloc[9]['Grand total'])
 
 n1edo3 = delChi2.iloc[0]['Municipio']
 n2edo3 = delChi2.iloc[1]['Municipio']
@@ -422,16 +425,16 @@ n7edo3 = delChi2.iloc[6]['Municipio']
 n8edo3 = delChi2.iloc[7]['Municipio']
 n9edo3 = delChi2.iloc[8]['Municipio']
 n10edo3 = delChi2.iloc[9]['Municipio']
-v1edo3 =f"{ int(delChi2.iloc[0]['Grand total']):,}"
-v2edo3 =f"{ int(delChi2.iloc[1]['Grand total']):,}"
-v3edo3 =f"{ int(delChi2.iloc[2]['Grand total']):,}"
-v4edo3 =f"{ int(delChi2.iloc[3]['Grand total']):,}"
-v5edo3 =f"{ int(delChi2.iloc[4]['Grand total']):,}"
-v6edo3 =f"{ int(delChi2.iloc[5]['Grand total']):,}"
-v7edo3 =f"{ int(delChi2.iloc[6]['Grand total']):,}"
-v8edo3 =f"{ int(delChi2.iloc[7]['Grand total']):,}"
-v9edo3 =f"{ int(delChi2.iloc[8]['Grand total']):,}"
-v10edo3 =f"{int( delChi2.iloc[9]['Grand total']):,}"
+v1edo3 = int(delChi2.iloc[0]['Grand total'])
+v2edo3 = int(delChi2.iloc[1]['Grand total'])
+v3edo3 = int(delChi2.iloc[2]['Grand total'])
+v4edo3 = int(delChi2.iloc[3]['Grand total'])
+v5edo3 = int(delChi2.iloc[4]['Grand total'])
+v6edo3 = int(delChi2.iloc[5]['Grand total'])
+v7edo3 = int(delChi2.iloc[6]['Grand total'])
+v8edo3 = int(delChi2.iloc[7]['Grand total'])
+v9edo3 = int(delChi2.iloc[8]['Grand total'])
+v10edo3 =int( delChi2.iloc[9]['Grand total'])
 
 n1edo4 = delPue2.iloc[0]['Municipio']
 n2edo4 = delPue2.iloc[1]['Municipio']
@@ -443,21 +446,21 @@ n7edo4 = delPue2.iloc[6]['Municipio']
 n8edo4 = delPue2.iloc[7]['Municipio']
 n9edo4 = delPue2.iloc[8]['Municipio']
 n10edo4 = delPue2.iloc[9]['Municipio']
-v1edo4 =f"{ int(delPue2.iloc[0]['Grand total']):,}"
-v2edo4 =f"{ int(delPue2.iloc[1]['Grand total']):,}"
-v3edo4 =f"{ int(delPue2.iloc[2]['Grand total']):,}"
-v4edo4 =f"{ int(delPue2.iloc[3]['Grand total']):,}"
-v5edo4 =f"{ int(delPue2.iloc[4]['Grand total']):,}"
-v6edo4 =f"{ int(delPue2.iloc[5]['Grand total']):,}"
-v7edo4 =f"{ int(delPue2.iloc[6]['Grand total']):,}"
-v8edo4 =f"{ int(delPue2.iloc[7]['Grand total']):,}"
-v9edo4 =f"{ int(delPue2.iloc[8]['Grand total']):,}"
-v10edo4 =f"{int( delPue2.iloc[9]['Grand total']):,}"
+v1edo4 = int(delPue2.iloc[0]['Grand total'])
+v2edo4 = int(delPue2.iloc[1]['Grand total'])
+v3edo4 = int(delPue2.iloc[2]['Grand total'])
+v4edo4 = int(delPue2.iloc[3]['Grand total'])
+v5edo4 = int(delPue2.iloc[4]['Grand total'])
+v6edo4 = int(delPue2.iloc[5]['Grand total'])
+v7edo4 = int(delPue2.iloc[6]['Grand total'])
+v8edo4 = int(delPue2.iloc[7]['Grand total'])
+v9edo4 = int(delPue2.iloc[8]['Grand total'])
+v10edo4 =int( delPue2.iloc[9]['Grand total'])
 
-bulletedo1 = ("Las 10 alcaldías con más incidencias de abuso sexual fueron: "+str(n1edo1)  +" ("+ str(v1edo1)+"), "+str(n2edo1) +" ("+ str(v2edo1)+"), "+str(n3edo1) +" ("+ str(v3edo1)+"), "+str(n4edo1) +" ("+ str(v4edo1)+"), "+str(n5edo1) +" ("+ str(v5edo1)+"), "+str(n6edo1) +" ("+ str(v6edo1)+"), "+str(n7edo1) +" ("+ str(v7edo1)+"), "+str(n8edo1) +" ("+ str(v8edo1)+"), "+str(n9edo1) +" ("+ str(v9edo1) +") y "+str(n10edo1)+" ("+ str(v10edo1)+").")
-bulletedo2 = ("Los 10 municipios con más incidencias de abuso sexual fueron: "+str(n1edo2) +" ("+ str(v1edo2)+"), "+str(n2edo2) +" ("+ str(v2edo2)+"), "+str(n3edo2) +" ("+ str(v3edo2)+"), "+str(n4edo2) +" ("+ str(v4edo2)+"), "+str(n5edo2) +" ("+ str(v5edo2)+"), "+str(n6edo2) +" ("+ str(v6edo2)+"), "+str(n7edo2) +" ("+ str(v7edo2)+"), "+str(n8edo2) +" ("+ str(v8edo2)+"), "+str(n9edo2) +" ("+ str(v9edo2)+") y "+str(n10edo2) +" ("+ str(v10edo2)+").")
-bulletedo3 = ("Los 10 municipios con más incidencias de abuso sexual fueron: "+str(n1edo3) +" ("+ str(v1edo3)+"), "+str(n2edo3) +" ("+ str(v2edo3)+"), "+str(n3edo3) +" ("+ str(v3edo3)+"), "+str(n4edo3) +" ("+ str(v4edo3)+"), "+str(n5edo3) +" ("+ str(v5edo3)+"), "+str(n6edo3) +" ("+ str(v6edo3)+"), "+str(n7edo3) +" ("+ str(v7edo3)+"), "+str(n8edo3) +" ("+ str(v8edo3)+"), "+str(n9edo3) +" ("+ str(v9edo3)+") y "+str(n10edo3) +" ("+ str(v10edo3)+").")
-bulletedo4 = ("Los 10 municipios con más incidencias de abuso sexual fueron: "+str(n1edo4) +" ("+ str(v1edo4)+"), "+str(n2edo4) +" ("+ str(v2edo4)+"), "+str(n3edo4) +" ("+ str(v3edo4)+"), "+str(n4edo4) +" ("+ str(v4edo4)+"), "+str(n5edo4) +" ("+ str(v5edo4)+"), "+str(n6edo4) +" ("+ str(v6edo4)+"), "+str(n7edo4) +" ("+ str(v7edo4)+"), "+str(n8edo4) +" ("+ str(v8edo4)+"), "+str(n9edo4) +" ("+ str(v9edo4)+") y "+str(n10edo4) +" ("+ str(v10edo4)+").")
+bulletedo1 = ("Las 10 alcaldías con más delitos de acoso sexual fueron: "+str(n1edo1)  +" ("+ str(v1edo1)+"), "+str(n2edo1) +" ("+ str(v2edo1)+"), "+str(n3edo1) +" ("+ str(v3edo1)+"), "+str(n4edo1) +" ("+ str(v4edo1)+"), "+str(n5edo1) +" ("+ str(v5edo1)+"), "+str(n6edo1) +" ("+ str(v6edo1)+"), "+str(n7edo1) +" ("+ str(v7edo1)+"), "+str(n8edo1) +" ("+ str(v8edo1)+"), "+str(n9edo1) +" ("+ str(v9edo1) +") y "+str(n10edo1)+" ("+ str(v10edo1)+").")
+bulletedo2 = ("Los 10 municipios con más delitos de acoso sexual fueron: "+str(n1edo2) +" ("+ str(v1edo2)+"), "+str(n2edo2) +" ("+ str(v2edo2)+"), "+str(n3edo2) +" ("+ str(v3edo2)+"), "+str(n4edo2) +" ("+ str(v4edo2)+"), "+str(n5edo2) +" ("+ str(v5edo2)+"), "+str(n6edo2) +" ("+ str(v6edo2)+"), "+str(n7edo2) +" ("+ str(v7edo2)+"), "+str(n8edo2) +" ("+ str(v8edo2)+"), "+str(n9edo2) +" ("+ str(v9edo2)+") y "+str(n10edo2) +" ("+ str(v10edo2)+").")
+bulletedo3 = ("Los 10 municipios con más delitos de acoso sexual fueron: "+str(n1edo3) +" ("+ str(v1edo3)+"), "+str(n2edo3) +" ("+ str(v2edo3)+"), "+str(n3edo3) +" ("+ str(v3edo3)+"), "+str(n4edo3) +" ("+ str(v4edo3)+"), "+str(n5edo3) +" ("+ str(v5edo3)+"), "+str(n6edo3) +" ("+ str(v6edo3)+"), "+str(n7edo3) +" ("+ str(v7edo3)+"), "+str(n8edo3) +" ("+ str(v8edo3)+"), "+str(n9edo3) +" ("+ str(v9edo3)+") y "+str(n10edo3) +" ("+ str(v10edo3)+").")
+bulletedo4 = ("Los 10 municipios con más delitos de acoso sexual fueron: "+str(n1edo4) +" ("+ str(v1edo4)+"), "+str(n2edo4) +" ("+ str(v2edo4)+"), "+str(n3edo4) +" ("+ str(v3edo4)+"), "+str(n4edo4) +" ("+ str(v4edo4)+"), "+str(n5edo4) +" ("+ str(v5edo4)+"), "+str(n6edo4) +" ("+ str(v6edo4)+"), "+str(n7edo4) +" ("+ str(v7edo4)+"), "+str(n8edo4) +" ("+ str(v8edo4)+"), "+str(n9edo4) +" ("+ str(v9edo4)+") y "+str(n10edo4) +" ("+ str(v10edo4)+").")
 
 
 
